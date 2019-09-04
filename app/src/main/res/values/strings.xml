@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MyStorage</string>
+    <string name="btnAddTitle">Add Item</string>
+    <string name="etNewItemDefault">Enter a new item</string>
+    <string name="dialog_header">Add new item</string>
+    <string name="default_text">Item name...</string>
+    <string name="add">Add</string>
+    <string name="cancel">CANCEL</string>
+    <string name="storageButton">Storage</string>
+    <string name="cameraButton">Camera</string>
+    <string name="cancelButton">Cancel</string>
+    <string name="okButton">OK</string>
+</resources>
