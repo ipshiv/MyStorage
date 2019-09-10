@@ -2,6 +2,7 @@ package com.example.mystorage;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -18,11 +19,13 @@ import android.hardware.camera2.TotalCaptureResult;
 import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.Image;
 import android.media.ImageReader;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Message;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
@@ -119,12 +122,41 @@ public class ImagePickerActivity extends AppCompatActivity {
 
         mCameraButton = (Button)findViewById(R.id.cameraButton);
 
+        mStorageButton = (Button)findViewById(R.id.storageButton);
+
+        mOkButton = (Button)findViewById(R.id.okButton);
+
+        mCancelButton = (Button)findViewById(R.id.cancelButton);
+
         mCameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switchButton();
             }
         });
+
+        mStorageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openStoragePic();
+            }
+        });
+
+        mOkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                okPicture();
+            }
+        });
+
+        mCancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cancelPicture();
+            }
+        });
+
+
 
     }
 
@@ -152,6 +184,58 @@ public class ImagePickerActivity extends AppCompatActivity {
             }
         }
 
+    }
+
+    private void openStoragePic ()
+    {
+        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+        photoPickerIntent.setType("image/*");
+        //GALLERY_REQUEST
+        startActivityForResult(photoPickerIntent, 1);
+
+    }
+
+    //static Bitmap answerBitmap;
+    private void okPicture ()
+    {
+      //  answerBitmap = mImageResult.getDrawingCache();
+        Intent answerIntent = new Intent();
+
+       // answerIntent.putExtra("BitmapImage", answerBitmap);
+       // answerIntent.putExtra("img", mImageResult.toString());
+        Uri uri = (Uri)mImageResult.getTag();
+        answerIntent.putExtra("img", uri);
+        setResult(RESULT_OK, answerIntent);
+        finish();
+    }
+
+    private void cancelPicture ()
+    {
+        Intent answerIntent = new Intent();
+        setResult(RESULT_CANCELED, answerIntent);
+        finish();
+    }
+
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
+        super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
+
+        Bitmap bitmap = null;
+        //ImageView imageView = (ImageView) findViewById(R.id.imageView);
+
+        if (resultCode == RESULT_OK) {
+            Uri selectedImage = imageReturnedIntent.getData();
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), selectedImage);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            mImageResult.setImageBitmap(bitmap);
+            mImageResult.setTag(selectedImage);
+        }
     }
 
     private void switchView() {
@@ -274,9 +358,6 @@ public class ImagePickerActivity extends AppCompatActivity {
 
                 }
             }, mBackgroundHandler);
-
-
-
 
 
         } catch (CameraAccessException e) {
