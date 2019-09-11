@@ -54,49 +54,48 @@
 28-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:19:9-54
 29        android:supportsRtl="true"
 29-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:20:9-35
-30        android:testOnly="true"
-31        android:theme="@style/AppTheme" >
-31-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:21:9-40
-32        <activity android:name="com.example.mystorage.MainActivity" >
-32-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:22:9-28:20
-32-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:22:19-47
-33            <intent-filter>
-33-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:23:13-27:29
-34                <action android:name="android.intent.action.MAIN" />
-34-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:24:17-69
-34-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:24:25-66
-35
-36                <category android:name="android.intent.category.LAUNCHER" />
-36-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:26:17-77
-36-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:26:27-74
-37            </intent-filter>
-38        </activity>
-39        <activity
-39-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:29:9-35:20
-40            android:name="com.example.mystorage.ImagePickerActivity"
-40-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:29:19-54
-41            android:parentActivityName="com.example.mystorage.MainActivity" >
-41-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:30:13-55
-42
-43            <!-- The meta-data tag is required if you support API level 15 and lower -->
-44            <meta-data
-44-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:32:13-34:49
-45                android:name="android.support.PARENT_ACTIVITY"
-45-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:33:17-63
-46                android:value=".MainActivity" />
-46-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:34:17-46
-47        </activity>
-48
-49        <provider
-49-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\rnd\.gradle\gradle-5.4.1\caches\transforms-2\files-2.1\bba9e662e9f4bf0da774229f97b853fc\lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
-50            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-50-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\rnd\.gradle\gradle-5.4.1\caches\transforms-2\files-2.1\bba9e662e9f4bf0da774229f97b853fc\lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
-51            android:authorities="com.example.mystorage.lifecycle-process"
-51-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\rnd\.gradle\gradle-5.4.1\caches\transforms-2\files-2.1\bba9e662e9f4bf0da774229f97b853fc\lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
-52            android:exported="false"
-52-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\rnd\.gradle\gradle-5.4.1\caches\transforms-2\files-2.1\bba9e662e9f4bf0da774229f97b853fc\lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
-53            android:multiprocess="true" />
-53-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\rnd\.gradle\gradle-5.4.1\caches\transforms-2\files-2.1\bba9e662e9f4bf0da774229f97b853fc\lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
-54    </application>
-55
-56</manifest>
+30        android:theme="@style/AppTheme" >
+30-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:21:9-40
+31        <activity android:name="com.example.mystorage.MainActivity" >
+31-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:22:9-28:20
+31-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:22:19-47
+32            <intent-filter>
+32-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:23:13-27:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:24:17-69
+33-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:24:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:26:17-77
+35-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:26:27-74
+36            </intent-filter>
+37        </activity>
+38        <activity
+38-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:29:9-35:20
+39            android:name="com.example.mystorage.ImagePickerActivity"
+39-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:29:19-54
+40            android:parentActivityName="com.example.mystorage.MainActivity" >
+40-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:30:13-55
+41
+42            <!-- The meta-data tag is required if you support API level 15 and lower -->
+43            <meta-data
+43-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:32:13-34:49
+44                android:name="android.support.PARENT_ACTIVITY"
+44-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:33:17-63
+45                android:value=".MainActivity" />
+45-->E:\git projects\MyStorage\app\src\main\AndroidManifest.xml:34:17-46
+46        </activity>
+47
+48        <provider
+48-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\rnd\.gradle\gradle-5.4.1\caches\transforms-2\files-2.1\bba9e662e9f4bf0da774229f97b853fc\lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
+49            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+49-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\rnd\.gradle\gradle-5.4.1\caches\transforms-2\files-2.1\bba9e662e9f4bf0da774229f97b853fc\lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
+50            android:authorities="com.example.mystorage.lifecycle-process"
+50-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\rnd\.gradle\gradle-5.4.1\caches\transforms-2\files-2.1\bba9e662e9f4bf0da774229f97b853fc\lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
+51            android:exported="false"
+51-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\rnd\.gradle\gradle-5.4.1\caches\transforms-2\files-2.1\bba9e662e9f4bf0da774229f97b853fc\lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
+52            android:multiprocess="true" />
+52-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\rnd\.gradle\gradle-5.4.1\caches\transforms-2\files-2.1\bba9e662e9f4bf0da774229f97b853fc\lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
+53    </application>
+54
+55</manifest>
