@@ -1208,7 +1208,7 @@ id src_in
 id src_over
 id standard
 id start
-id storage
+id storageButton
 id stretch
 id submenuarrow
 id submit_area

@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements AddItemDialog.OnI
 
     }
 
+
     private void initRecyclerView () {
         mAdapter = new RecyclerViewAdapter(this, mItemViewModel.getItemsInStorage().getValue());
         mRecyclerView.setAdapter(mAdapter);
@@ -81,9 +83,12 @@ public class MainActivity extends AppCompatActivity implements AddItemDialog.OnI
     }
 
     @Override
-    public void sendInput(String input) {
+    public void sendInput(String input, Uri uri) {
+        Log.d(TAG, "sendInput: uri" + uri);
         String uuid = uuid = UUID.randomUUID().toString().replace("-", "");
-        mItemViewModel.addItem(new Item(uuid, input, "", ""));
+        mItemViewModel.addItem(new Item(uuid, input, uri.toString(), ""));
     }
+
+
 
 }

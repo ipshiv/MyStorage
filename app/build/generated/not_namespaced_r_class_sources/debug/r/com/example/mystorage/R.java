@@ -5316,7 +5316,7 @@ public final class R {
     public static final int src_over=0x7f0800b1;
     public static final int standard=0x7f0800b2;
     public static final int start=0x7f0800b3;
-    public static final int storage=0x7f0800b4;
+    public static final int storageButton=0x7f0800b4;
     public static final int stretch=0x7f0800b5;
     public static final int submenuarrow=0x7f0800b6;
     public static final int submit_area=0x7f0800b7;
